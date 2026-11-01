@@ -15,3 +15,17 @@ Dokumentasi perbaikan bug dan penyesuaian kode pada proyek akhir BubuList.
 * **Solusi Perbaikan:** 
   Membersihkan dan menghapus blok kode duplikat yang menumpuk di bagian bawah sehingga file CSS kembali bersih dan efisien tanpa mengubah tampilan visual antarmuka.
 * **Hash Commit:** *(diisi nanti setelah commit)*
+
+---
+
+## 2. Pengujian & Penanganan Validasi Form Kosong (Input Tugas)
+
+* **Gejala / Masalah:** 
+  Form tambah tugas berpotensi menerima masukan kosong atau kurang dari batas minimal karakter jika pengguna langsung menekan tombol simpan tanpa mengisi judul tugas.
+* **Alat DevTools:** 
+  Browser Developer Tools / Form Validation Testing (Layar MVP $\pm$ 400 px)
+* **Penyebab (Berkas : Baris):** 
+  `script.js` (logika validasi pada event listener `taskForm.addEventListener`).
+* **Solusi Perbaikan:** 
+  Menerapkan pengecekan kondisi (`if (judul.length < 3)`) yang otomatis menampilkan pesan peringatan berwarna merah (`errorTask`) dan menghentikan proses penyimpanan jika data tidak valid, sehingga data sampah tidak masuk ke dalam daftar tugas.
+* **Hash Commit:** *(diisi nanti setelah commit)*
